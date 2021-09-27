@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainViewComponent } from './pages/main-view/main-view.component';
-
+import {MatIconModule} from '@angular/material/icon'; 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
@@ -16,6 +16,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     BrowserModule,
     AppRoutingModule, 
     DragDropModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

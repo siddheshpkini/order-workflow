@@ -14,21 +14,21 @@ export class MainViewComponent implements OnInit {
   constructor() { }
 
   dashboard: Dashboard = new Dashboard('Test Board', [
-    new JobStatus('open', 'wip', [
+    new JobStatus('open', 'WIP', [
       new Job(871, '', '', 'Auris TR345', 'Ahmed', 299),
       new Job(870, 'WASHING', 'RASHID', 'Abarth OTHERS PETROL 1234ASDVVIUY', 'Nader', 124.49)
     ]),
 
-    new JobStatus('wip', 'ready', [
+    new JobStatus('WIP', 'ready', [
       new Job(868, '', '', 'Auris TR345', 'Ahmed', 299)
     ]),
 
-    new JobStatus('ready', 'paymentDue', [
+    new JobStatus('ready', 'payment Due', [
       new Job(867, 'WASHING', 'RASHID', 'Abarth OTHERS PETROL 1234ASDVVIUY', 'Nader', 124.49),
       new Job(866, '', '', 'Auris TR345', 'Ahmed', 299)
     ]),
 
-    new JobStatus('paymentDue', 'paymentDue', [
+    new JobStatus('payment Due', 'payment Due', [
       new Job(865, '', '', 'Auris TR345', 'Ahmed', 299),
       new Job(864, '', '', 'Auris TR345', 'Ahmed', 299)
     ])    
