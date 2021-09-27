@@ -5,9 +5,9 @@
   </div>
   
   <div class="utility">
-    <div class="sort">Sort By</div>
-    <div class="filter">Filter</div> 
-    <div class="search"><span class="bold">Search :</span> Customer name/Phone No./ Reg No.</div>
+    <div class="sort"><mat-icon> swap_vert </mat-icon>Sort By<mat-icon > expand_more </mat-icon></div>
+    <div class="filter"><mat-icon > tune </mat-icon>Filter<mat-icon > expand_more </mat-icon></div> 
+    <div class="search"><mat-icon > search </mat-icon> Customer name/Phone No./Reg No.</div>
   </div>
 
   <div class="board">
@@ -39,14 +39,14 @@
                         </div>
                       </div>
                       <div class="attachment">
-                        <div class="repairOrder">Repair Order</div>
-                        <div class="repairOrder">Invoice</div>
+                        <div class="repairOrder"><mat-icon style="transform: rotate(45deg);" > attach_file </mat-icon> Repair Order</div>
+                        <div class="repairOrder"><mat-icon style="transform: rotate(45deg);" > attach_file </mat-icon> Invoice</div>
                       </div>
                     </div>
-                    <div class="carDetails">{{item.carModel}}</div>
+                    <div class="carDetails"><mat-icon> directions_car </mat-icon> {{item.carModel}}</div>
                     <div class="contact">
-                      <div class="poc">{{item.jobIncharge}}</div>
-                      <div class="whatsapp">Whatsapp</div>
+                      <div class="poc"><mat-icon> person </mat-icon> {{item.jobIncharge}}</div>
+                      <div class="whatsapp"><mat-icon> whatsapp </mat-icon>Whatsapp</div>
                     </div>
                     <div class="invoiceDetails">
                       <div class="inv">
