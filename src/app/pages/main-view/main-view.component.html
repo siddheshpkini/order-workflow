@@ -1,0 +1,88 @@
+<div class="root">
+  
+  <div class="total">
+    <h1>Total Due: <span class="highlight-green">AED 177,383.69</span></h1>
+  </div>
+  
+  <div class="utility">
+    <div class="sort">Sort By</div>
+    <div class="filter">Filter</div> 
+    <div class="search"><span class="bold">Search :</span> Customer name/Phone No./ Reg No.</div>
+  </div>
+
+  <div class="board">
+    <div class="board-wrapper">
+
+      <div class="board-columns">
+
+        <div class="board-column-out" *ngFor="let jobStatus of dashboard.jobStatuses">
+          <div class="column-title">
+            {{jobStatus.status}}
+          </div>
+          <div class="board-column-in">
+              <div class="tasks-container"
+                cdkDropList
+                id="{{jobStatus.status}}"
+                [cdkDropListData]="jobStatus.jobs"
+                [cdkDropListConnectedTo]="jobStatus.nextID"
+                (cdkDropListDropped)="drop($event)">
+
+                <div class="task" *ngFor="let item of jobStatus.jobs" cdkDrag>
+                  <div class="card">
+                    <div class="info">
+                      <div class="jobDetails">
+                        <div class="jobID">
+                          <div class="bigFont highlight-green"> #{{item.jobID}} </div> <div class="paymentStatus">PAYMENT DUE</div>
+                        </div>
+                        <div class="jobAssign">
+                          <div *ngIf="item.jobTask"class="purple">{{item.jobTask}}</div> <div *ngIf="item.jobTaskIncharge"class="yellow">{{item.jobTaskIncharge}}</div>
+                        </div>
+                      </div>
+                      <div class="attachment">
+                        <div class="repairOrder">Repair Order</div>
+                        <div class="repairOrder">Invoice</div>
+                      </div>
+                    </div>
+                    <div class="carDetails">{{item.carModel}}</div>
+                    <div class="contact">
+                      <div class="poc">{{item.jobIncharge}}</div>
+                      <div class="whatsapp">Whatsapp</div>
+                    </div>
+                    <div class="invoiceDetails">
+                      <div class="inv">
+                        <div class="invHeading">INVOICE</div>
+                        <div class="details">GP-LCVUZK-683</div>
+                      </div>
+                      <div class="inv">
+                        <div class="invHeading">CREATED BY</div>
+                        <div class="details">VIDYUT</div>
+                      </div>
+                      <div class="inv">
+                        <div class="invHeading">COMPLETETION DATE</div>
+                        <div class="details">28 FEB 2021 02:54 PM</div>
+                      </div>
+                    </div>
+                    <div class="amount">
+                      <div class="totalInfoLeft">
+                        <div class="totalHeadingLeft">TOTAL:</div>
+                        <div class="totalDetailsLeft">AED 799.05</div>
+                      </div>
+                      <div class="totalInfoRight">
+                        <div class="totalHeadingRight">AMOUNT DUE:</div>
+                        <div class="totalDetailsRight">AED {{item.amountDue}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</div>
